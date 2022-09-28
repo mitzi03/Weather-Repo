@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <script src="assets/js/script.js" ></script>
 </head>
-<body>
-    <header>Weather Dashboard</header>
-    <main>
-        <section>
-            <h1> Search for a City </h1>
-        </section>
-        <div>
-            <h1> city </h1>
+<body class="flex-colomn min-100-vh">
+    <header class="hero">
+      <h1 class="app-title">
+         Weather Dashboard
+      </h1>
+  </header>
+    
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-sm-12 col-md-4 float-left">
+           <div class="card">
+            <h2 class="card-header text-uppercase" > Search for a City </h2>
+            <div id="user-form" class="card-body">
+                <input type="text" id="myInput" placeholder="City Name.."/>
+                <button class="btn" id="searchBtn"> Search </button>
         </div>
+        </div>
+        
+        <div class="card history">
+            <h2 class="card-header text-uppercase"> Search History </h2>
+        </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-8 float-right">
+            <div>
+                <h2 class="text-uppercase bg-light"> Current Weather</h2>
+                <div class="city"></div>
+            </div>
+
         <div>
-            <h1> Forecast </h1>
+            <h2 class="text-uppercase bg-light"> Forecast </h2>
+            <div class="five-day"></div>
         </div>
 
     </main>
